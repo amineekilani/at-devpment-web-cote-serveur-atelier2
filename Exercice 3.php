@@ -33,7 +33,18 @@
         </nav>
         <div class="container my-3">
             <?php
+                //1
                 $TAB=["Atelier N°2","Bonjour Tout le monde","Vous êtes les bienvenus"];
+                //2
+                $JSON="{";
+                foreach ($TAB as $key=>$value)
+                {
+                    $JSON.="\"$key\":\"$value\"";
+                }
+                $JSON[-1]="}";
+                echo $JSON."<br>";
+                //4
+                echo str_contains($JSON,"Bonjour")?"Bonjour existe":"Bonjour n'existe pas";
             ?>
         </div>
     </body>
